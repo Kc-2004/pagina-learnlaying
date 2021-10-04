@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="stilos.css">
+	<title></title>
+</head>
+<body>
+<div id="contenedor" >
+      <header>
+           <img src="img/logo1.png" id="logo">
+             <h1 id="encabezado"> <br>LEARN <br> PLAYING <br> AND ENJOY IT</h1>
+             <br>
+            <nav>
+                <ol>
+             <li><a href="index.html" class="menu">INICIO /</a></li>  
+               <li><a href="nivelbasico.html" class="menu">NIVEL BASICO /</a></li> 
+               <li><a href="#" class="menu">NIVEL INTERMEDIO /</a></li> 
+                <li><a href="nivelavanzado.html" class="menu">NIVEL AVANZADO /</a></li>
+                </ol> 
+            </nav>
+        </header>
+		<p class="space"></p>
+		<!--ORACION UNO-->
+		<div id="instruc">
+			
+<p align="justify"> <b>Directions: </b>At this level, select the correct sentences for each sentence in spanish. You must guess to go to the next sentence.
+To pass this level you must get 7 to 10 points, for each success you will have two points, but if you make a mistake you will have one less point.In case you run out of points, we will not accumulate them,  good luck friend</p><br>
+<p align="justify"><b>Instrucciones: </b>En este nivel tendrás que seleccionar la oración correcta para cada oración en español. Debes adivinar para pasar a la siguiente oración. para pasar este nivel debes obtener de 7 a 10 puntos, por cada éxito tendrás dos puntos, pero si cometes un error tendrás un punto menos. En caso de que te quedes sin puntos, no los acumularemos, buena suerte amigo.</p><br>
+		</div>
+		<div style="width: 720px; height: 450px; background-color: #F5FF7B; margin: auto; display: none;" id="last_one"><br><br><br>
+		<H1 style="text-align: bottom; font-weight: bolder;font-size: 45px;font-family: Vegur, 'PT Sans', Verdana, sans-serif;-webkit-transform: rotate(-10deg); 
+-moz-transform: rotate(-10deg);" > ¡CONGRATULATIONS!</H1>
+		<img src="https://www.emotipedia.com/wp-content/uploads/apple_carita-sonriente.png"><br><br>
+		<h2 id="last_one_h"></h2>
+		<progress value="0" max="10" id="barra"></progress><br><br><br>
+		<h4>Haz conseguido los puntos necesarios, por lo tanto pasaste el nivel intermedio.</h4>
+		<h4>Ahora completa el nivel avanzado, ¡Suerte!</h4>
+	</div>
+	<div style="width: 720px; height: 450px; background-color: #F5FF7B; margin: auto; display: none;" id="last_inco"><br><br><br>
+		<H1 style="text-align: bottom; font-weight: bolder;font-size: 45px;font-family: Vegur, 'PT Sans', Verdana, sans-serif;-webkit-transform: rotate(-10deg); 
+-moz-transform: rotate(-10deg);" > ¡Oh no! Lo sentimos mucho</H1>
+		<img src="https://images.emojiterra.com/google/android-oreo/512px/2639.png" width="250px" height="150px"><br><br>
+		<h2 id="last_inco_h"></h2>
+		<progress value="0" max="10" id="barra2"></progress><br><br><br>
+		<h4>No conseguiste los puntos necesarios para pasar este nivel.</h4>
+		<h4>Sigue prácticando, lo harás mejor a la próxima. ¡Suerte!</h4>
+	</div>
+		<table align="left" cellpadding=4 cellspacing=0 border=0 id="prueba_de_oracion_1" >
+			<tr>
+				<td>
+		<img src="https://static.vecteezy.com/system/resources/previews/000/373/564/non_2x/happy-boy-eating-on-the-table-vector.jpg" style="margin: auto;width: 200px; height: 200px;">
+		
+				</td>
+			</tr>
+				<tr>
+				<td>
+						<p style="font-weight: bolder; font-size: 20px">Oración: Él está comiendo</p><br>
+		<button onclick=oracion1i() style="width: 250px; height: 25px; border-radius: 5px; border-style: dotted;" id="oracion1i">He eats food.</button><br><br>
+		<button onclick=oracion2i() style="width: 250px; height: 25px; border-radius: 5px; border-style: dotted;" id="oracion2i">He is writting.</button><br><br>
+		<button onclick=oracioncorrecta() style="width: 250px; height: 25px; border-radius: 5px; border-style: dotted;" id="oracioncorrecta">He is eating.</button><br><br>
+		<button onclick=oracion3i() style="width: 250px; height: 25px; border-radius: 5px; border-style: dotted;" id="oracion3i">He is running.</button>
+		<br><br> <p id="parte1c" style="display: none; color:green; font-weight: bold;">CORRECTO +2 puntos</p>
+			   			<p id="parte1i" style="display: none; color:red; font-weight: bold;">INCORRECTO </p>
+				</td>
+			</tr> 
+		</table>
+		<table align="left" cellpadding=4 cellspacing=0 border=0 >
+			<tr><td><p style="padding: 100px"></p></td></tr>
+		</table>
+		<!--ORACION DOS-->
+				<table align="left" cellpadding=4 cellspacing=0 border=0 id="prueba_de_oracion_2" style="display: none;">
+			<tr>
+				<td>
+<img src="https://png.pngtree.com/png-clipart/20190906/original/pngtree-sick-girl-drinking-water-and-taking-medicine-png-image_4570262.jpg" style="margin: auto;width: 200px; height: 200px;">
+		
+				</td>
+			</tr>
+				<tr>
+				<td>
+				<p style="font-weight: bolder; font-size: 20px">Oración: Ella toma agua.</p>
+				<br>
+<button onclick=parte2_oracioncorrecta() id="parte2_oracioncorrecta" style="width: 250px; height: 25px; border-radius: 5px; border-style: dotted;">She drinks water.</button><br><br>
+<button onclick=parte2_oracion1() id="parte2_oracion1" style="width: 250px; height: 25px; border-radius: 5px; border-style: dotted;">She eats bread.</button><br><br>
+ <button onclick=parte2_oracion2() id="parte2_oracion2" style="width: 250px; height: 25px; border-radius: 5px; border-style: dotted;">She loves water.</button>
+<br><br>
+	<button onclick=parte2_oracion3() id="parte2_oracion3" style="width: 250px; height: 25px; border-radius: 5px; border-style: dotted;">She is drinking water.</button>
+				<br><br><p id="parte2c" style="display: none; color:green; font-weight: bold;">CORRECTO +2 puntos</p>
+			   			<p id="parte2i" style="display: none; color:red; font-weight: bold;">INCORRECTO -1 punto</p>
+				</td>
+			</tr>
+		</table>
+		<table align="left" cellpadding=4 cellspacing=0 border=0 >
+			<tr><td><p style="padding: 100px"></p></td></tr>
+		</table>
+		<!--ORACION TRES-->
+			<table align="left" cellpadding=4 cellspacing=0 border=0 id="prueba_de_oracion_3" style="display: none;" >
+			<tr>
+				<td>
+		<img src="https://www.hola.com/imagenes/estar-bien/20180925130054/consejos-para-cuidar-a-un-gatito-recien-nacido-cs/0-601-526/cuidardgatito-t.jpg?filter=w600&filter=ds75" style="margin: auto;width: 210px; height: 200px;">
+		
+				</td>
+			</tr>
+				<tr>
+				<td>
+						<p style="font-weight: bolder; font-size: 20px">Oración: Mi gato es pequeño</p><br>
+	<button onclick=parte3_oracion1() id="parte3_oracion1"  style=" width: 250px; height: 25px; border-radius: 5px; border-style: dotted;">My cat is eating.</button><br><br>
+	<button onclick=parte3_oracion2() id="parte3_oracion2"  style=" width: 250px; height: 25px; border-radius: 5px; border-style: dotted;">My cat is white.</button><br>
+	<br>
+	<button onclick=parte3_oracion3() id="parte3_oracion3"  style=" width: 250px; height: 25px; border-radius: 5px; border-style: dotted;">My cat is big.</button>
+	<br><br>
+	<button onclick=parte3_oracioncorrecta() id="parte3_oracioncorrecta"  style=" width: 250px; height: 25px; border-radius: 5px; border-style: dotted;">My cat is small.</button>
+					<br><br><p id="parte3c" style="display: none; color:green; font-weight: bold;">CORRECTO +2 puntos</p>
+			   			<p id="parte3i" style="display: none; color:red; font-weight: bold;">INCORRECTO -1 punto</p>
+				</td>
+			</tr>
+		</table>
+	
+<DIV>
+	<p style="padding: 5rem"></p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</DIV>
+<table align="left" cellpadding=4 cellspacing=0 border=0 >
+			<tr><td><p style="padding: 20px; color:#A2FFF5">spaceeeeeeeeeeeeeeeeeeeeeee</p></td></tr>
+		</table>
+		<!--ORACION CUATRO-->
+			<table align="left" cellpadding=4 cellspacing=0 border=0  id="prueba_de_oracion_4" style="display: none;">
+			<tr>
+				<td>
+		<img src="https://i.pinimg.com/originals/3d/5d/19/3d5d190d379c81066fc3f74c5c5f31d2.jpg" style="margin: auto;
+		width: 220px; height: 200px;">
+		
+				</td>
+			</tr>
+				<tr>
+				<td>
+						<p style="font-weight: bolder; font-size: 20px">Oración: El carro es verde.</p><br>
+		<button onclick=parte4_oracion1() id="parte4_oracion1" style="width: 250px;  height: 25px; border-radius: 5px; border-style: dotted;">The car is ready.</button><br><br>
+		<button onclick=parte4_oracioncorrecta() id="parte4_oracioncorrecta" style="width: 250px;  height: 25px; border-radius: 5px; border-style: dotted;">The car is green.</button><br><br>
+		<button onclick=parte4_oracion2() id="parte4_oracion2" style="width: 250px;  height: 25px; border-radius: 5px; border-style: dotted;">The car is not red.</button><br><br>
+		<button onclick=parte4_oracion3() id="parte4_oracion3" style="width: 250px;  height: 25px; border-radius: 5px; border-style: dotted;">The car are green.</button>
+				<br><br><p id="parte4c" style="display: none; color:green; font-weight: bold;">CORRECTO +2 puntos</p>
+			   			<p id="parte4i" style="display: none; color:red; font-weight: bold;">INCORRECTO -1 punto</p>
+			   			<p class="spaceunder"></p>
+				</td>
+			</tr>
+		</table>
+		<!--ORACION 5-->
+		<table align="left" cellpadding=4 cellspacing=0 border=0 >
+			<tr><td><p style="padding: 100px"></p></td></tr>
+		</table>
+			<table align="left" cellpadding=4 cellspacing=0 border=0  id="prueba_de_oracion_5" style="display: none;">
+			<tr>
+				<td>
+		<img src="https://st2.depositphotos.com/5792148/8453/v/950/depositphotos_84535658-stock-illustration-boy-student.jpg" style="margin: auto; width: 200px; height: 200px;">
+				</td>
+			</tr>
+				<tr>
+				<td>
+						<p style="font-weight: bolder; font-size: 20px">Oración: Yo soy un estudiante.</p><br>
+		<button onclick=parte5_oracion1() id="parte5_oracion1" style="width: 250px;  height: 25px; border-radius: 5px; border-style: dotted;">I are student.</button><br><br>
+		<button onclick=parte5_oracion2() id="parte5_oracion2" style="width: 250px;  height: 25px; border-radius: 5px; border-style: dotted;">I am a teacher.</button><br><br>
+		<button onclick=parte5_oracioncorrecta() id="parte5_oracioncorrecta" style="width: 250px;  height: 25px; border-radius: 5px; border-style: dotted;">I am a student.</button><br><br>
+	<button onclick=parte5_oracion3() id="parte5_oracion3" style="width: 250px;  height: 25px; border-radius: 5px; border-style: dotted;">I am a boy.</button>
+		<br><br><p id="parte5c" style="display: none; color:green; font-weight: bold;">CORRECTO +2 puntos</p>
+			   			<p id="parte5i" style="display: none; color:red; font-weight: bold;">INCORRECTO -1 punto</p>
+		<p class="spaceunder"></p>
+				</td>
+			</tr>
+		</table>
+	
+<script type="text/javascript" src="funcion.js"></script>
+        <footer>
+        <p>Diseñado por:</p>
+<P>Kevin Cruz</P>
+    <P>Derechos reservados Supérate Grupo  Q  2020 &reg;</P>
+    </footer>
+ </div>
+</body>
+</html>	
+
+		
+	

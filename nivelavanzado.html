@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="stilos.css">
+	<title></title>
+	  
+</head>
+<body>
+<div id="contenedor" >
+      <header>
+ <img src="img/logo1.png" id="logo">
+             <h1 id="encabezado"> <br>LEARN <br> PLAYING <br> AND ENJOY IT</h1>
+             <br>
+                  <nav>
+                <ol>
+             <li><a href="index.html" class="menu">INICIO /</a></li>  
+               <li><a href="nivelbasico.html" class="menu">NIVEL BASICO /</a></li> 
+               <li><a href="nivelmedio.html" class="menu">NIVEL INTERMEDIO /</a></li> 
+                <li><a href="#" class="menu">NIVEL AVANZADO /</a></li>
+                </ol> 
+            </nav>
+        </header>
+		<p class="space"></p>
+		<!--Palabra Uno-->
+		<div style="width: 720px; height: 350px; background-color: #F5FF7B; margin: auto; display: none;" id="congrat"><br><br><br>
+		<H1 style="text-align: bottom; font-weight: bolder;font-size: 45px;font-family: Vegur, 'PT Sans', Verdana, sans-serif;-webkit-transform: rotate(-10deg); 
+-moz-transform: rotate(-10deg);" > ¡CONGRATULATIONS!</H1>
+		<img src="https://www.emotipedia.com/wp-content/uploads/apple_carita-sonriente.png"><br><br>
+		<h2 id="last_one_h"></h2>
+		<h4>Haz pasado el nivel avanzado.</h4>
+		<h4>Eres un gran estudiante, Felicidades.</h4>
+	</div>
+	<div style="width: 720px; height: 390px; background-color: #F5FF7B; margin: auto; display: none;" id="fallo"><br><br>
+	<br>	<H1 style="text-align: bottom; font-weight: bolder;font-size: 45px;font-family: Vegur, 'PT Sans', Verdana, sans-serif;-webkit-transform: rotate(-10deg); 
+-moz-transform: rotate(-10deg);" > ¡Oh no! Lo sentimos mucho</H1>
+		<img src="https://images.emojiterra.com/google/android-oreo/512px/2639.png" width="250px" height="150px"><br><br>
+		<h2 id="fallo"></h2><br><br>
+		<h4>Haz acabado tus tres intentos</h4>
+		<h4>Sigue prácticando, lo harás mejor a la próxima. ¡Suerte!</h4>
+	</div>
+		<div id="instruct">
+			
+<p align="justify"> <b>Directions: </b>At this level, write the English word in the white square below the word. Then press the evaluate button, for each word you only have 3 attempts, otherwise it will not go to the next word. Good luck!</p><br>
+<p align="justify"><b>Instrucciones: </b>En este nivel escribe la palabra en inglés en el cuadrito blanco que está debajo de la palabra. Luego presiona el botón evaluar, por cada palabra tienes unicamente 3 intentos, sino no pasarás a la siguiente palabra. ¡Buena Suerte! </p><br>
+		</div>
+	<table align="left" id="parte1_palabra">
+		<tr>
+			<td>
+				<img src="https://st.depositphotos.com/1302980/1321/v/950/depositphotos_13218669-stock-illustration-cartoon-bed-with-teddy-bear.jpg" width="200px" height="200px">
+				<h2>CAMA</h2> 
+			</td>
+		</tr>
+		<tr>
+			<td><input type="text" id="Palabra1" style="width: 150px; height: 15px; border-radius: 5px; border-style: dotted; text-align: center;"><br><br>
+				<button onclick=palabra1_evaluar() id="palabra1_evaluar" value="evaluar">Evaluar</button>
+				<p class="spaceunder"></p>
+				<p id="palabra1c" style="display: none; color:green; font-weight: bold;">CORRECTO</p>
+			   			<p id="palabra1i" style="display: none; color:red; font-weight: bold;">INCORRECTO </p>
+			   		<p class="spaceunder"> </p>
+			</td>
+		</tr>
+	</table>
+	 <table  align="left" >
+			<tr>
+				<td width="10px" style="color:#A2FFF5 ">espace</td>
+			</tr>
+          </table>
+          <!--Imagen Dos-->
+	<table align="left" id="parte2_palabra" style="display: none;">
+		<tr>
+			<td>
+				<img src="https://i.pinimg.com/474x/74/12/ad/7412adc414ab632f147f305a7c5c3c53.jpg" width="200px" height="200px">
+				<h2>BOTELLA</h2> 
+			</td>
+		</tr>
+		<tr>
+			<td><input type="text" id="palabra2" style="width: 150px; height: 15px; border-radius: 5px; border-style: dotted; text-align: center;"><br><br>
+				<button onclick=palabra2_evaluar() id="palabra2_evaluar" value="evaluar">Evaluar</button>
+				<p class="spaceunder"></p>
+				<p id="palabra2c" style="display: none; color:green; font-weight: bold;">CORRECTO</p>
+			   			<p id="palabra2i" style="display: none; color:red; font-weight: bold;">INCORRECTO </p>
+			</td>
+		</tr>
+	</table>
+	 <table  align="left" >
+			<tr>
+				<td width="10px" style="color:#A2FFF5 ">espace</td>
+			</tr>
+          </table>
+          <!--Imagen Tres-->
+	<table align="left" id="parte3_palabra" style="display: none;">
+		<tr>
+			<td>
+				<img src="https://static.vecteezy.com/system/resources/previews/000/263/294/non_2x/cartoon-front-door-vector.jpg" width="200px" height="200px">
+				<h2>PUERTA</h2> 
+			</td>
+		</tr>
+		<tr>
+			<td><input type="text" id="palabra3" style="width: 150px; height: 15px; border-radius: 5px; border-style: dotted; text-align: center;"><br><br>
+				<button onclick=palabra3_evaluar() id="palabra3_evaluar" value="evaluar">Evaluar</button>
+				<p class="spaceunder"></p>
+				<p id="palabra3c" style="display: none; color:green; font-weight: bold;">CORRECTO</p>
+			   			<p id="palabra3i" style="display: none; color:red; font-weight: bold;">INCORRECTO </p>
+			</td>
+		</tr>
+	</table>
+	 <table  align="left" >
+			<tr>
+				<td width="10px" style="color:#A2FFF5 ">pace</td>
+			</tr>
+          </table>
+          <!--Imagen Cuatro-->
+	<table align="left" id="parte4_palabra" style="display: none;">
+		<tr>
+			<td>
+				<img src="https://4.bp.blogspot.com/-4g98g9iV5D4/Vk6gnba1G0I/AAAAAAAADEI/A475KUv4qn4/s1600/9353062-dibujo-animado-de-ordenador-de-sobremesa-sonriente-ilustraci-n-vectorial-foto-de-archivo.jpg" width="200px" height="200px">
+				<h2>COMPUTADORA</h2> 
+			</td>
+		</tr>
+		<tr>
+			<td><input type="text" id="palabra4" style="width: 150px; height: 15px; border-radius: 5px; border-style: dotted; text-align: center;"><br><br>
+				<button onclick=palabra4_evaluar() id="palabra4_evaluar" value="evaluar">Evaluar</button>
+				<p class="spaceunder"></p>
+				<p id="palabra4c" style="display: none; color:green; font-weight: bold;">CORRECTO</p>
+			   			<p id="palabra4i" style="display: none; color:red; font-weight: bold;">INCORRECTO </p>
+			</td>
+		</tr>
+	</table>
+	 <table  align="left" >
+			<tr>
+				<td width="10px" style="color:#A2FFF5 ">pace</td>
+			</tr>
+          </table>
+          <!--Quinta palabra-->
+	<table align="left" id="parte5_palabra" style="display: none;">
+		<tr>
+			<td>
+				<img src="https://thumbs.dreamstime.com/b/sacapuntas-de-l%C3%A1piz-15057545.jpg" width="200px" height="200px">
+				<h2>SACAPUNTAS</h2> 
+			</td>
+		</tr>
+		<tr>
+			<td><input type="text" id="palabra5" style="width: 150px; height: 15px; border-radius: 5px; border-style: dotted; text-align: center;"><br><br>
+				<button onclick=palabra5_evaluar() id="palabra5_evaluar" value="evaluar">Evaluar</button>
+				<p class="spaceunder"></p>
+				<p id="palabra5c" style="display: none; color:green; font-weight: bold;">CORRECTO</p>
+			   			<p id="palabra5i" style="display: none; color:red; font-weight: bold;">INCORRECTO </p>
+			   			<p class="spaceunder"> </p>
+			</td>
+		</tr>
+	</table>
+
+<script type="text/javascript" src="funcion.js"></script>
+
+        <footer>
+        <p>Diseñado por:</p>
+<P>Kevin Cruz</P>
+    <P>Derechos reservados Supérate Grupo  Q  2020 &reg;</P>
+    </footer>
+ </div>
+</body>
+</html>	
+	

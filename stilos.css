@@ -1,0 +1,91 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	text-align: center;
+	background:#F3F781;
+	color: solid black;
+}
+nav{
+	align-content: center;
+	background-color: greenyellow;
+		border-radius: 25px;
+
+}
+nav ol{
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+
+}
+.space{
+	padding: 1rem;
+}
+.spaceunder{
+	padding: 1rem;
+}
+#welcome{
+	text-align: center;
+	width: 240px;
+}
+#contenedor{
+	max-width: 100%;
+	width: 1000px;
+	text-align: center;
+	justify-content: center;
+	margin: auto;
+	height: auto;
+	background-color: #A2FFF5;
+}
+#logo{
+	float: left;
+	margin-top: 25px;
+	margin-left: 270px;
+	width: 150px;
+}
+#encabezado{
+	max-width: 1000px;
+	margin: 10px -150px;
+	padding: 20px 0px;
+	text-align: center;
+	height: auto;
+}
+a.menu{
+	color: white;
+	text-decoration: none;
+	padding: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+li a:hover{
+	color:rgb(22, 211, 201);
+	transition: all .3s;
+}
+footer{
+	align-content: center;
+	max-width: 100%;
+	height: auto;
+	margin: auto;
+	color: white;
+	background-color:rgb(154, 241, 23);
+	clear: both;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	text-align: center;
+}
+#barra{
+	  -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+progress::-webkit-progress-bar {
+    background-color:white;
+
+    }
+    progress::-webkit-progress-value {
+    border-radius : 1px;
+
+}

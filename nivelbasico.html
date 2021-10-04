@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="stilos.css">
+	<script type="text/javascript" src="funcion.js"></script>
+	<title></title>
+</head>
+<body>
+<div id="contenedor">
+      <header>
+            <img src="img/logo1.png" id="logo">
+             <h1 id="encabezado"> <br>LEARN <br> PLAYING <br> AND ENJOY IT</h1>
+             <br>
+            <nav>
+                <ol>
+             <li><a href="index.html" class="menu">INICIO /</a></li>  
+               <li><a href="#" class="menu">NIVEL BASICO /</a></li> 
+               <li><a href="nivelmedio.html" class="menu">NIVEL INTERMEDIO /</a></li> 
+                <li><a href="nivelavanzado.html" class="menu">NIVEL AVANZADO /</a></li>
+               
+                </ol> 
+            </nav>
+        </header>
+		<p class="space"></p>
+		<div id="Directions">
+<p> <b>Directions: </b>At this level, select the correct word for each image. You must guess to go to the next image</p>
+<p><b>Instrucciones: </b>En este nivel tendrás que seleccionar la palabra correcta para cada imagen. Debes adivinar para pasar a la siguiente imagen</p><br>
+</div><div id="contenedor">
+		<!--Imagen Uno-->
+		<table  align=left cellpadding=4 cellspacing=0 border=0 id="prueba1">
+			<tr>
+				<td>
+	<img src="https://image.shutterstock.com/image-vector/cute-funny-comic-style-garden-260nw-549147517.jpg" width="200" height="200">	
+				</td>
+				</tr>
+				<tr>
+				<td>
+				<button onclick=correcto() id="correcto" style="width: 68px; height: 20px; border: 1px solid black "> Strawberry</button>
+			<button onclick=incorrecto() id="incorrecto" style="width: 60px; height: 20px; border: 1px solid black"> Apple</button>
+			<button onclick=distractor1() id="distractor1" style="width: 60px; height: 20px; border: 1px solid black">Grapes</button>
+				</td>
+			</tr>
+			<tr>
+				<td><p style="padding: 2px"></p>
+			      <button onclick=distractor2() id="distractor2" style="width: 60px; height: 20px; border: 1px solid black;">Orange</button>
+			      <button onclick=distractor3() id="distractor3" style="width: 60px; height: 20px; border: 1px solid black;">Cherry</button>
+			   <br><br> <p id="parte1" style="display: none; color:green; font-weight: bold;">CORRECTO</p>
+			   			<p id="parte1i" style="display: none; color:red; font-weight: bold;">INCORRECTO</p>
+			      <p class="spaceunder"></p>
+				</td>
+			</tr>
+		</table>
+         <table  align=left cellpadding=4 cellspacing=0 border=0 >
+			<tr>
+				<td width="10px" style="color:#A2FFF5 ">espace</td>
+			</tr>
+          </table>
+          <!--Imagen Dos-->
+		<table  align=left cellpadding=4 cellspacing=0 border=0 id="prueba2" style="display:none;" >
+			<tr>
+				<td>
+	<img src="https://i.pinimg.com/originals/aa/85/cf/aa85cfa2c157fe89231efabbbae1c374.jpg" width="200" height="200">
+		<td style="color: #A2FFF5">espace</td> 	
+				</td>
+				</tr>
+				<tr>
+				<td>
+			<button onclick=parte2_mal1() id="parte2_mal1" style="width: 68px; height: 20px; border: 1px solid black "> Book</button>
+			<button onclick=parte2_mal2() id="parte2_mal2" style="width: 60px; height: 20px; border: 1px solid black"> Pen</button>
+			<button onclick=parte2_mal3() id="parte2_mal3" style="width: 60px; height: 20px; border: 1px solid black">Eraser</button>
+				</td>
+			</tr>
+			<tr>
+				<td><p style="padding: 2px"></p>
+	  <button onclick=parte2_correcto() id="parte2_correcto" style="width: 60px; height: 20px; border: 1px solid black;">Pencil</button>
+			<button onclick=parte2_mal4() id="parte2_mal4" style="width: 70px; height: 20px; border: 1px solid black;">Notebook</button>
+				  <br><br> <p id="parte2" style="display: none; color:green; font-weight: bold;">CORRECTO</p>
+			   			<p id="parte2i" style="display: none; color:red; font-weight: bold;">INCORRECTO</p>
+				</td>
+			</tr>
+		</table>
+		<!--Imagen Tres-->
+			<table align=left cellpadding=4 cellspacing=0 border=0 id="prueba3" style="display:none;" >
+			<tr>
+				<td>
+	<img src="https://i.pinimg.com/originals/8e/3e/7b/8e3e7bed65aeff0d55e0250133dbbfd4.jpg" width="200" height="200">	
+				</td>
+				</tr>
+				<tr>
+				<td>
+
+				<button onclick=parte3_mal1() id="parte3_mal1" style="width: 68px; height: 20px; border: 1px solid black "> Ladder</button>
+	   	<button onclick=parte3_correcto() id="parte3_correcto" style="width: 60px; height: 20px; border: 1px solid black"> Chair</button>
+			<button onclick=parte3_mal2() id="parte3_mal2" style="width: 60px; height: 20px; border: 1px solid black">Table</button>
+				</td>
+			</tr>
+			<tr>
+					<td><p style="padding: 2px"></p>
+			      <button onclick=parte3_mal3() id="parte3_mal3" style="width: 60px; height: 20px;border: 1px solid black">Window</button>
+			      <button onclick=parte3_mal4() id="parte3_mal4" style="width: 60px; height: 20px;border: 1px solid black">Armchair</button>
+			       <br><br> <p id="parte3" style="display: none; color:green; font-weight: bold;">CORRECTO</p>
+			   			<p id="parte3i" style="display: none; color:red; font-weight: bold;">INCORRECTO</p>
+			      <p class="spaceunder"></p>
+				</td>
+			</tr>
+		</table>
+         <table  align=left cellpadding=4 cellspañ2cing=0 border=0>
+			<tr>
+				<td width="10px" style="color:#A2FFF5 ">espace</td>
+			</tr>
+			<!--Imagen Cuatro-->
+          </table>
+		<table  align=left cellpadding=4 cellspacing=0 border=0 id="prueba4" style="display:none;">
+			<tr>
+				<td>
+	<img src="https://images-na.ssl-images-amazon.com/images/I/31olBd%2B125L._AC_SY400_.jpg" width="200" height="200">	
+				</td>
+				</tr>
+				<tr>
+				<td>
+				<button onclick=parte4_mal1() id="parte4_mal1" style="width: 68px; height: 20px; border: 1px solid black "> Ears</button>
+			<button onclick=parte4_mal2() id="parte4_mal2" style="width: 60px; height: 20px; border: 1px solid black">Nose</button>
+			<button onclick=parte4_mal3() id="parte4_mal3" style="width: 60px; height: 20px; border: 1px solid black">Eyes</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p style="padding: 2px"></p>
+			      <button onclick=parte4_mal4() id="parte4_mal4" style="width: 60px; height: 20px; border: 1px solid black">Fingers</button>
+			<button onclick=parte4_correcto() id="parte4_correcto" style="width: 60px; height: 20px; border: 1px solid black">Hands</button>
+			 <br><br> <p id="parte4" style="display: none; color:green; font-weight: bold;">CORRECTO</p>
+			   			<p id="parte4i" style="display: none; color:red; font-weight: bold;">INCORRECTO</p>
+				</td>
+				<td style="color: #A2FFF5">espace</td> 
+			</tr>
+		</table>
+		 <!--Imagen Cinco-->
+		  <table  align=left cellpadding=4 cellspacing=0 border=0 id="prueba5" style="display:none;">
+			<tr>
+				<td>
+	<img src="https://image.freepik.com/vector-gratis/cinturon-dibujos-animados_119631-185.jpg" width="200" height="200">	
+				</td>
+				</tr>
+				<tr>
+				<td>
+				<button onclick=parte5_mal1() id="parte5_mal1" style="width: 68px; height: 20px; border: 1px solid black "> Glove</button>
+			<button onclick=parte5_mal2() id="parte5_mal2" style="width: 60px; height: 20px; border: 1px solid black"> Hat</button>
+			<button onclick=parte5_correcto() id="parte5_correcto" style="width: 60px; height: 20px; border: 1px solid black">Belt</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p style="padding: 2px"></p>
+			      <button onclick=parte5_mal3() id="parte5_mal3" style="width: 60px; height: 20px; border: 1px solid black">Shoes</button>
+			      <button onclick=parte5_mal4() id="parte5_mal4" style="width: 60px; height: 20px; border: 1px solid black">Shirt</button>
+				 <br><br> <p id="parte5" style="display: none; color:green; font-weight: bold;">CORRECTO</p>
+			   			<p id="parte5i" style="display: none; color:red; font-weight: bold;">INCORRECTO</p>
+				</td>
+			</tr>
+		</table>
+<img src="img/congrat.png" id="last" style="display: none; margin: auto; border-radius: 10px" width="650px" height="350px">
+<p class="spaceunder"></p>
+               </div>
+        <footer>
+        <p>Diseñado por:</p>
+<P>Kevin Cruz</P>
+    <P>Derechos reservados Supérate Grupo  Q  2020 &reg;</P>
+    </footer>
+</div>
+
+</body>
+</html>	
